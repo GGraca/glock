@@ -212,11 +212,6 @@ lockscreen(Display *dpy, int screen) {
 	XAllocNamedColor(dpy, DefaultColormap(dpy, lock->screen), COLOR1, &color, &dummy);
 	lock->color[0] = color.pixel;
 
-	
-
-	// unsigned int a, b;
-	// int c, d;
-	//XReadBitmapFile(dpy, lock->win, "Actual.bitmap", &a, &b, &lock->image, &c, &d);
 	lock->image = XCreatePixmapFromBitmapData(dpy, lock->win, (char *)img_bits, img_width, img_height,
 		WhitePixel(dpy, lock->screen),
 		BlackPixel(dpy, lock->screen),
